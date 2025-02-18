@@ -1,0 +1,12 @@
+.navbar {
+    display: none;
+}
+
+@media (width > 80em) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.25rem;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quicklist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div class="navbar">
+        <img class="logo" src="/images/logo.svg" alt="logo quicklist">
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="header">
+                <a href="#" class="back">Voltar</a>
+                <h2 class="title">Compras da semana</h2>
+            </div>
+
+            <div class="input-group">
+                <input class="input" type="text" id="itemInput" placeholder="Adicionar um novo item">
+                <button class="addButton" onclick="addItem()">Adicionar item</button>
+            </div>
+
+            <ul class="shopping-list" id="shoppingList">
+                <li class="list-item">
+                    <div class="left-section">
+                        <input type="radio" name="item">
+                        <label for="item">Pão de forma</label>
+                    </div>
+
+                    <button class="delete-button" onclick="removeItem(this)">
+                        <img src="/images/trash.svg" alt="ícone de lixeira">
+                    </button>
+                </li>
+                <li class="list-item">
+                    <div class="left-section">
+                        <input type="radio">
+                        <label for="item">Café preto</label>
+                    </div>
+
+                    <button class="delete-button" onclick="removeItem(this)">
+                        <img src="/images/trash.svg" alt="ícone de lixeira">
+                    </button>
+                </li>
+                <li class="list-item">
+                    <div class="left-section">
+                        <input type="radio">
+                        <label for="item">Suco de laranja</label>
+                    </div>
+
+                    <button class="delete-button" onclick="removeItem(this)">
+                        <img src="/images/trash.svg" alt="ícone de lixeira">
+                    </button>
+                </li>
+                <li class="list-item">
+                    <div class="left-section">
+                        <input type="radio">
+                        <label for="item">Bolacha</label>
+                    </div>
+
+                    <button class="delete-button" onclick="removeItem(this)">
+                        <img src="/images/trash.svg" alt="ícone de lixeira">
+                    </button>
+                </li>
+            </ul>
+
+            <div class="alert" id="alertBox">
+                <div class="alert-content">
+                    <img src="/images/warning.svg" alt="sinal de alerta">
+                    O item foi removido da lista
+                </div>
+
+                <img src="/images/cross.svg" alt="sinal de x para fechar">
+            </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
